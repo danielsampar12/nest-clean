@@ -46,10 +46,5 @@ export class CreateAccountController {
         password: hashedPassword,
       },
     })
-
-    return {
-      sucess: true,
-      message: 'Created user',
-    }
   }
 }

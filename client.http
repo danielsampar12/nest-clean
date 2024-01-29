@@ -7,7 +7,7 @@ Content-Type: application/json
 
 {
   "name": "Daniel",
-  "email": "daniel@gmail.com",
+  "email": "daniel1@gmail.com",
   "password": "123123"
 }
 
@@ -30,6 +30,21 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-  "email": "daniel@gmail.com",
-  "password": "1232123"
+  "title": "Nova pergunta 2",
+  "content": "Conteudo da nova pergunta"
 }
+
+###
+
+# @name fetch_recent_questions
+GET {{baseUrl}}/questions
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+
+###
+
+# @name fetch_recent_questions_page_2
+GET {{baseUrl}}/questions?page=2
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
