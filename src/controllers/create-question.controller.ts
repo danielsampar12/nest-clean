@@ -8,12 +8,12 @@ import {
   UsePipes,
 } from '@nestjs/common'
 
-import { CurrentUser } from 'src/auth/current-user.decorator'
+import { CurrentUser } from '@/auth/current-user.decorator'
 
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard'
-import { TokenPayload } from 'src/auth/jwt.strategy'
-import { ZodValidationPipe } from 'src/pipes/zod-validation-pipe'
-import { PrismaService } from 'src/prisma/prisma.service'
+import { JwtAuthGuard } from '@/auth/jwt-auth.guard'
+import { TokenPayload } from '@/auth/jwt.strategy'
+import { ZodValidationPipe } from '@/pipes/zod-validation-pipe'
+import { PrismaService } from '@/prisma/prisma.service'
 
 import { z } from 'zod'
 
