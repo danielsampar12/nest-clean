@@ -47,6 +47,9 @@ export class CreateAccountController {
       },
     })
 
-    console.log(body)
+    return {
+      sucess: true,
+      message: 'Created user',
+    }
   }
 }
