@@ -4,7 +4,6 @@ import {
   HttpCode,
   Post,
   UnauthorizedException,
-  UsePipes,
 } from '@nestjs/common'
 import { JwtService } from '@nestjs/jwt'
 import { compare } from 'bcryptjs'
