@@ -7,7 +7,7 @@ import { TokenPayload } from '@/infra/auth/jwt.strategy'
 import { ZodValidationPipe } from '@/infra/http/pipes/zod-validation-pipe'
 
 import { z } from 'zod'
-import { NestCreateQuestionUseCase } from '@/infra/use-cases/nest-create-question.usecase'
+import { CreateQuestionUseCase } from '@/domain/forum/application/use-cases/create-question'
 
 const createQuestionBodySchema = z.object({
   title: z.string(),
@@ -22,7 +22,7 @@ const createQuestionsValidationPipe = new ZodValidationPipe(
 @Controller('/questions')
 @UseGuards(JwtAuthGuard)
 export class CreateQuestionController {
-  constructor(private readonly createQuestion: NestCreateQuestionUseCase) {}
+  constructor(private readonly createQuestion: CreateQuestionUseCase) {}
 
   @Post()
   @HttpCode(201)

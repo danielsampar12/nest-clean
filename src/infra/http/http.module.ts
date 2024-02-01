@@ -4,7 +4,8 @@ import { AuthenticateController } from './controllers/authenticate.controller'
 import { CreateQuestionController } from './controllers/create-question.controller'
 import { FetchRecentQuestionsController } from './controllers/fetch-recent-questions.controller'
 import { DatabaseModule } from '../database/database.module'
-import { NestCreateQuestionUseCase } from '../use-cases/nest-create-question.usecase'
+import { FetchRecentQuestionsUseCase } from '@/domain/forum/application/use-cases/fetch-recent-questions'
+import { CreateQuestionUseCase } from '@/domain/forum/application/use-cases/create-question'
 
 @Module({
   imports: [DatabaseModule],
@@ -14,6 +15,6 @@ import { NestCreateQuestionUseCase } from '../use-cases/nest-create-question.use
     CreateQuestionController,
     FetchRecentQuestionsController,
   ],
-  providers: [NestCreateQuestionUseCase],
+  providers: [CreateQuestionUseCase, FetchRecentQuestionsUseCase],
 })
 export class HttpModule {}
